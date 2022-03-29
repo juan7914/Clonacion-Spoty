@@ -34,9 +34,19 @@ align-items: center;
 justify-content: space-between;
 max-width: 300px;
 
+
 `
 const FooterRight = styled.div`
 flex:0.3;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 35px;
+
+& .MuiSlider-root{
+    color: #00ff00;
+}
+
 `
 
 export {FooterContainer, FooterLeft, FooterCenter, FooterRight}
