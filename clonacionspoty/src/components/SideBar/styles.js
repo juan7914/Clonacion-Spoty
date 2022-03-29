@@ -26,6 +26,7 @@ const Playlists = styled.div`
 `
 
 const Choices = styled.div`
+margin-left:1px;
 display: flex;
 align-items: center;
 color: gray;

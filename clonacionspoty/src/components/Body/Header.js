@@ -2,8 +2,12 @@ import { HeaderContainer, HeaderRight, HeaderLeft } from './styles'
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import Avatar from '@material-ui/core/Avatar';
+import {useSelector} from "react-redux";
+import  {selectUser}  from '../../feactures/UserSlice';
+
 
 const Header = () => {
+  const user = useSelector(selectUser)
   return (
     <HeaderContainer>
            <HeaderLeft>
@@ -11,8 +15,8 @@ const Header = () => {
            <input type="text" placeholder="Search for Artistc, Songs, or other"/>
             </HeaderLeft>
            <HeaderRight>
-             <Avatar/>
-             <h4>Sergio89</h4>
+             <Avatar src={ user?.images[0]?.url} alt={user?.id}/>
+             <h4>{ user?.id  }</h4>
             </HeaderRight>
     </HeaderContainer>
   )
